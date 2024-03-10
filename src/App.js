@@ -1,4 +1,6 @@
-import logo from './logo.svg';
+import React from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import logo from './logo.png';
 import './App.css';
 
 function App() {
@@ -6,17 +8,26 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="button-container">
+          <p>Seguem minhas redes sociais:</p>
+          <a
+            href="https://www.linkedin.com/in/robertasoliman/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="custom-network"
+          >
+             <FaLinkedin />
+          </a>
+
+          <a
+            href="https://github.com/robertasolimandonofreo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="custom-network"
+          >
+             <FaGithub />
+          </a>
+        </div>
       </header>
     </div>
   );
