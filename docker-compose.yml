@@ -5,9 +5,11 @@ networks:
   proxy:
     external: true
 services:
-  app:
-    container_name: app
-    build: ./
+  frontend:
+    container_name: frontend
+    build:
+      dockerfile: app.Dockerfile
+      context: .
     restart: always
     networks:
       - proxy
@@ -17,6 +19,26 @@ services:
       - 3000:3000
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+    tty: true
+    stdin_open: true
+
+  api:
+    container_name: api
+    build:
+      dockerfile: api.Dockerfile
+      context: .
+    restart: always
+    networks:
+      - proxy
+    cap_add:
+      - ALL
+    ports:
+      - 3009:3009
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3009"]
       interval: 60s
       timeout: 10s
       retries: 3
