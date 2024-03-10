@@ -12,12 +12,12 @@ const Db = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await axios.post('http://localhost:3009/enviar-email', { email });
       console.log('Resposta do servidor:', response.data);
-
-      if (response.data && response.data.success) {
+  
+      if (response.data && response.data.message === 'Email enviado com sucesso!') {
         setSuccessMessage('Email enviado com sucesso!');
         setErrorMessage('');
       } else {
@@ -29,13 +29,13 @@ const Db = () => {
       setSuccessMessage('');
       setErrorMessage('Erro ao enviar email. Tente novamente.');
     }
-  };
+  };  
 
   return (
     <div>
       <h1>Database</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">Email: </label>
         <input
           type="email"
           id="email"
