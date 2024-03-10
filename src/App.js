@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaDatabase } from 'react-icons/fa';
 import logo from './logo.png';
 import './App.css';
 
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="button-container">
-          <p>Seguem minhas redes sociais:</p>
+        <p className="p">NETWORK</p>
           <a
             href="https://www.linkedin.com/in/robertasoliman/"
             target="_blank"
@@ -28,6 +28,17 @@ function App() {
              <FaGithub />
           </a>
         </div>
+        <p className="p">TESTS</p>
+        <div className="button-container">
+          <a
+            href="db"
+            rel="noopener noreferrer"
+            className="custom-network"
+          >
+             <FaDatabase />
+          </a>
+          </div>
+
       </header>
     </div>
   );
