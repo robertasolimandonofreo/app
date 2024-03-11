@@ -3,3 +3,4 @@ config.sh
 .env
 *package-lock.json
 *node_modules
+Sentry.js

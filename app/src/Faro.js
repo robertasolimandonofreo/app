@@ -36,5 +36,5 @@ import { TracingInstrumentation } from '@grafana/faro-web-tracing';
     },
   });
   
-  export default faro;
+export default faro;
   

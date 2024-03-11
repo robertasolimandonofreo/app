@@ -5,6 +5,7 @@ import Routes from './Routes';
 import reportWebVitals from './reportWebVitals';
 import faro from './Faro';
 import { FaroErrorBoundary } from '@grafana/faro-react';
+import sentry from './Sentry';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,5 +15,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+sentry();
 faro();
 reportWebVitals();
