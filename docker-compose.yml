@@ -9,7 +9,7 @@ services:
     container_name: frontend
     build:
       dockerfile: app.Dockerfile
-      context: .
+      context: app
     restart: always
     networks:
       - proxy
@@ -29,7 +29,7 @@ services:
     container_name: api
     build:
       dockerfile: api.Dockerfile
-      context: .
+      context: api
     restart: always
     networks:
       - proxy
@@ -76,3 +76,5 @@ services:
       retries: 10
     networks:
       - proxy
+    ports:
+      - 5432:5432
