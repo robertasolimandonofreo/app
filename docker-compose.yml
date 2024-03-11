@@ -4,6 +4,7 @@ volumes:
 networks:
   proxy:
     external: true
+    
 services:
   app:
     container_name: app
