@@ -5,8 +5,8 @@ networks:
   proxy:
     external: true
 services:
-  frontend:
-    container_name: frontend
+  app:
+    container_name: app
     build:
       dockerfile: app.Dockerfile
       context: app
