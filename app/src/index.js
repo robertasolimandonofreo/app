@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Routes from './Routes';
+import Routes from './routes';
 import reportWebVitals from './reportWebVitals';
-import faro from './Faro';
+import faro from './faro';
 import { FaroErrorBoundary } from '@grafana/faro-react';
-import sentry from './Sentry';
+import sentry from './sentry';
 
 ReactDOM.render(
   <React.StrictMode>

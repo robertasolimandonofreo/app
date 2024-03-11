@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaDatabase } from 'react-icons/fa';
 import logo from './logo.png';
-import './App.css';
+import './app.css';
 
 function App() {
   return (
